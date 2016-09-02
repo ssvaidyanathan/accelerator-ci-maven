@@ -214,7 +214,7 @@
 						<configuration>
 							<executable>./node_modules/mocha/bin/mocha</executable>
 							<commandlineArgs>
-								test/unit
+								target/tests/unit
 							</commandlineArgs>
 						</configuration>
 					</execution>
