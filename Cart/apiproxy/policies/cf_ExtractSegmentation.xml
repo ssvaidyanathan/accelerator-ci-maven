@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" async="false" enabled="true" name="cf_ExtractSegmentation">
+    <ResourceURL>jsc://cf_ExtractSegmentation.js</ResourceURL>
+</Javascript>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="cf_HttpCodeLookupCommonErrorCodeMap">
+    <CacheKey>
+        <Prefix>BACKEND_ERROR_MAP</Prefix>
+        <KeyFragment>map</KeyFragment>
+        <KeyFragment>COMMON_ERROR_CODE_KEY</KeyFragment>
+    </CacheKey>
+    <CacheResource>BACKEND_ERROR_MAP</CacheResource>
+    <Scope>Global</Scope>
+    <AssignTo>commonErrorCodeMap</AssignTo>
+</LookupCache>

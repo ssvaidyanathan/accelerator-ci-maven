@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignTargetMsgDetails">
+    <AssignVariable>
+        <Name>response.header.Content-Type</Name>
+        <Value>text/xml</Value>
+    </AssignVariable>
+	<!-- Below details used for logging -->
+	<AssignVariable>
+		<Name>elfLog.targetURI</Name>
+		<Ref>request.uri</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>elfLog.targetResponse</Name>
+		<Ref>response.content</Ref>
+	</AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

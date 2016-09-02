@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="cf_LookupEnterpriseEntitlementsServiceResponse">
+    <DisplayName>cf_LookupEnterpriseEntitlementsServiceResponse</DisplayName>
+     <CacheKey>
+      <Prefix>permission</Prefix>
+      <KeyFragment ref="masterDealerCode"/>
+    </CacheKey>
+    <CacheResource>usercache</CacheResource>
+    <Scope>Global</Scope>
+    <AssignTo>callout.response</AssignTo>
+</LookupCache>

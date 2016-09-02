@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetOAuthV2Info name="cf_setEntitlementsToOAuthAttrib"> 
+  <AccessToken ref="onlyToken"></AccessToken>
+  <Attributes>
+    <Attribute name="abfEntitlements" ref="abfEntitlements"></Attribute>
+  </Attributes>
+</SetOAuthV2Info>

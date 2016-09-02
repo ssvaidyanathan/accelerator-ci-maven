@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_CreateCallEnterpriseEntitlementsServiceRequest">
+	<Source>dummymessage</Source>
+	<ResourceURL>xsl://cf_CreateCallEnterpriseEntitlementsServiceRequest.xslt</ResourceURL>
+	<OutputVariable>essrequest</OutputVariable>
+	<Parameters ignoreUnresolvedVariables="true">
+		<Parameter name="partnerId" value="RETAILDIRECT"/>
+		<Parameter name="requestId" ref="messageid"/>
+		<Parameter name="partnerTransactionId" ref="messageid"/>
+		<Parameter name="application" value="API"/>
+		<Parameter name="channel" ref="channelid"/>
+		<Parameter name="storeId" ref="storeid"/>
+		<Parameter name="dealerCode" ref="masterDealerCode"/>
+		<Parameter name="masterDealerCode" ref="masterDealerCode"/>
+	</Parameters>
+</XSL>

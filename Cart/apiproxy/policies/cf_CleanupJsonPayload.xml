@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" async="false" name="cf_CleanupJsonPayload">
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://cf_CleanupJsonPayload.js</ResourceURL>
+</Javascript>

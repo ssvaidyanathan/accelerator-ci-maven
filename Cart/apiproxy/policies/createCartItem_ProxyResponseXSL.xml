@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="createCartItem_ProxyResponseXSL">
+	<Source>response</Source>
+	<ResourceURL>xsl://createCartItem_ProxyResponse.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >
+		<Parameter name="productOfferingIdRequest" ref="flow.cart.request.productOfferingIdRequest"/>
+		<Parameter name="lineOfServiceIdRequest" ref="flow.cart.request.lineOfServiceIdRequest"/>
+		<Parameter name="assignedProductIdRequest" ref="flow.cart.request.assignedProductIdRequest"/>
+	</Parameters>
+</XSL>

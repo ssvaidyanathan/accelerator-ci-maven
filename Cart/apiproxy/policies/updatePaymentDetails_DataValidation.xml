@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updatePaymentDetails_DataValidation">
+    <DisplayName>updatePaymentDetails_DataValidation</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://updatePaymentdetails_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="cartId" ref="flow.cart.request.cartId" />
+        <Parameter name="isMobile" ref="ismobile"/>
+        <Parameter name="channelId" ref="channelid" />
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

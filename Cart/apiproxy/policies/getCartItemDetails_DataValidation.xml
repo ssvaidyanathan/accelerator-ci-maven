@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="getCartItemDetails_DataValidation">
+    <DisplayName>getCartItemDetails_DataValidation</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://getCartItemDetails_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true" >
+        <!-- Pass query/path parameters -->
+        <Parameter name="cartId" ref="flow.cart.request.cartId" />
+        <Parameter name="cartItemId" ref="flow.cart.request.cartItemId" />
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

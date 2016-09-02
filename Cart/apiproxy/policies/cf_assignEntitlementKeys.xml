@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" async="false" name="cf_assignEntitlementKeys">
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://cf_assignEntitlementKeys.js</ResourceURL>
+</Javascript>

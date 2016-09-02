@@ -1,0 +1,5 @@
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="cf_SpikeArrest">
+	<DisplayName>cf_SpikeArrest</DisplayName>
+	<Rate>300ps</Rate>
+	<Identifier ref="request.uri"/>
+</SpikeArrest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignApiErrorRaiseFaultNotAuthorized">
+	<AssignVariable>
+		<Name>apiError</Name>
+      <Value><![CDATA[
+			<apiError>
+				<statusCode>403</statusCode>
+				<reasonPhrase>Forbidden</reasonPhrase>
+				<errors>
+					<error>
+						<code>SECURITY-0002</code>
+						<userMessage>Insufficient permission to access the requested resource</userMessage>
+					</error>
+				</errors>
+			</apiError>
+			]]>
+	  </Value>
+	</AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

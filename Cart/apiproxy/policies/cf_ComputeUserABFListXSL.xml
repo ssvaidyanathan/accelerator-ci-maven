@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_ComputeUserABFListXSL">
+    <Properties/>
+    <Source>entitlementscachemsg</Source>
+    <ResourceURL>xsl://cf_ComputeUserABFListXSL.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="false">
+    </Parameters>
+    <OutputVariable>userABFListVar</OutputVariable>
+</XSL>

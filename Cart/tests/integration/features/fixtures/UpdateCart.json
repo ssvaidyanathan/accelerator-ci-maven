@@ -1,0 +1,132 @@
+{
+	"cart": {
+		"@actionCode": "REVIEW",
+		"@cartId": "{{CartId}}",
+		"orderLocation": {
+			"@id": "StoreID"
+		},
+		"status": {
+			"@statusCode": "Reviewed"
+		},
+		"orderType": "ACTIVATION",
+		"businessUnitName": "B2B",
+		"ipAddress": "192.102.23.21",
+		"deviceFingerPrintId": "system123",
+		"isInFlightOrder": "true",
+		"shipping": {
+			"shipTo": {
+				"personName": {
+					"firstName": "Jonas",
+					"familyName": "Novak",
+					"title": {
+
+					}
+				},
+				"addressCommunication": {
+					"@id": "1",
+					"preference": {
+						"preferred": "1"
+					},
+					"usageContext": "SHIPPING"
+				},
+				"emailCommunication": {
+					"emailAddress": "test@t-mobile.com"
+				}
+			},
+			"serviceLevelCode": "EXPRESS"
+		},
+		"cartItem": [{
+			"@actionCode": "UPDATE",
+			"@cartItemId": "{{CartItemId}}",
+			"uiAddedIndicator": "true",
+			"productOffering": {
+				"@productOfferingId": "HOAppleIphone6",
+				"name": "Galaxy Tab ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â® 4 8.0",
+				"longDescription": {
+					"descriptionCode": "UI_DESC",
+					"languageCode": "en",
+					"relativeSize": "Medium",
+					"contentType": "JSON",
+					"descriptionText": "Domestic Data Roaming10MB Capped - $10"
+				},
+				"offerType": "AddOn",
+				"offerSubType": "SoftGood",
+				"offeringStatus": {
+					"@statusCode": "FORSALE",
+					"effectivePeriod": {
+						"startTime": "2015-03-05T16:00:00-07:00",
+						"endTime": "2016-03-05T16:00:00-07:00"
+					}
+				},
+				"brand": "T-Mobile",
+				"businessUnit": "Magenta",
+				"offeringPrice": {
+					"@priceListLineId": "FullPrice1",
+					"productOfferingPrice": {
+						"name": "Session Pass",
+						"oneTimeCharge": "1"
+					}
+				}
+			},
+			"cartSchedule": {
+				"cartScheduleCharge": {
+					"@usageContext": "price",
+					"supervisorID": "SPECISEWA10",
+					"description": {
+						"@usageContext": "transactionid",
+						"#text": "ERIC123"
+					}
+				}
+			}
+		}, {
+			"@actionCode": "RETAIN",
+			"@cartItemId": "150002",
+			"cartSchedule": {
+				"cartScheduleCharge": {
+					"chargeFrequencyCode": "Monthly",
+					"description": "Price"
+				}
+			},
+			"lineOfService": {
+				"@lineOfServiceId": "LineOfServiceId",
+				"assignedProduct": {
+					"productOffering": {
+						"@productOfferingId": "HOAppleIphone6",
+						"name": "Simply Prepaid Unlimited Talk + Text + 1GB Data",
+						"displayName": "Simply Prepaid Unlimited Talk + Text + 1GB Data",
+						"shortDescription": {
+							"@languageCode": "en",
+							"#text": "Simply Prepaid Unlimited Talk + Text + 1GB Data- $40"
+						},
+						"longDescription": {
+							"descriptionCode": "?",
+							"languageCode": "en",
+							"relativeSize": "Long",
+							"contentType": "Text",
+							"descriptionText": "Simply Prepaid Unlimited Talk + Text + 1GB Data- $40"
+						},
+						"offerType": "Base",
+						"offerSubType": "SoftGood",
+						"offerLevel": "Line",
+						"offeringStatus": {
+							"@statusCode": "FORSALE"
+						},
+						"offeringPrice": {
+							"@priceListLineId": "PlanPrepaid",
+							"productOfferingPrice": {
+								"name": "PlanPrepaid",
+								"recurringFeeFrequency": "RECURRING",
+								"taxInclusiveIndicator": "No"
+							}
+						}
+					}
+				}
+			}
+		}],
+		"billTo": {
+			"customer": {
+				"@actionCode": "ADD"
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updatePPUdetails_DataValidation">   
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://updatePPUdetails_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="cartId" ref="updatePPUdetails.cartid"/>
+        <Parameter name="tokenScope" ref="tokenScope"/>
+        <Parameter name="authfinancialaccountid" ref="authfinancialaccountid"/>
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

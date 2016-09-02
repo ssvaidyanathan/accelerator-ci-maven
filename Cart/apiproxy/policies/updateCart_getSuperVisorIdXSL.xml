@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updateCart_getSuperVisorIdXSL">
+	<Source>request</Source>
+	<ResourceURL>xsl://updateCart_getSuperVisorIdXSL.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >
+	</Parameters>
+	<OutputVariable>supervisorIdListVar</OutputVariable>
+</XSL>

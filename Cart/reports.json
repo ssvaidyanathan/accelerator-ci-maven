@@ -1,0 +1,872 @@
+[
+  {
+    "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart",
+    "name": "As a Cart API consumer, I want to create a Cart",
+    "description": "",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/1_Create_Cart.feature",
+    "elements": [
+      {
+        "name": "Generate the OAuth token which is required to call all APIs",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;generate-the-oauth-token-which-is-required-to-call-all-apis",
+        "line": 4,
+        "keyword": "Scenario",
+        "description": "As an app developer\nI would like to generate an Oauth token\nSo that I can call the Carts APIs",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1726924
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set query parameters to",
+            "line": 9,
+            "keyword": "Given ",
+            "rows": [
+              {
+                "cells": [
+                  "parameter",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "grant_type",
+                  "client_credentials"
+                ]
+              }
+            ],
+            "result": {
+              "status": "passed",
+              "duration": 1029123
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:46"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 12,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 683576
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set basic authentication as header",
+            "line": 13,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 153965
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:41"
+            }
+          },
+          {
+            "name": "I GET /v1/oauth2/accesstoken",
+            "line": 14,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 1252795565
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:56"
+            }
+          },
+          {
+            "name": "response code should be 200",
+            "line": 15,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 285518
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "I store the value of body path $.access_token as access token",
+            "line": 16,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 1592277
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:259"
+            }
+          }
+        ]
+      },
+      {
+        "name": "(Negative) Create the Cart Item without passing Auth token",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;(negative)-create-the-cart-item-without-passing-auth-token",
+        "line": 19,
+        "keyword": "Scenario",
+        "description": "As a Carts API consumer\nI would like to call the Carts API without the Auth bearer token\nSo that I get an Invalid Access Token error",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 117346
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set query parameters to",
+            "line": 24,
+            "keyword": "Given ",
+            "rows": [
+              {
+                "cells": [
+                  "parameter",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "include",
+                  "cart"
+                ]
+              }
+            ],
+            "result": {
+              "status": "passed",
+              "duration": 212692
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:46"
+            }
+          },
+          {
+            "name": "I pipe contents of file ./CreateCart.json to body",
+            "line": 27,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 1600515
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:36"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 28,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 176762
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I create cart",
+            "line": 29,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 177826836
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:16"
+            }
+          },
+          {
+            "name": "response code should be 401",
+            "line": 30,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 159835
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 31,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 449485
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "response body path $.errors.error[0].code should be InvalidAccessToken",
+            "line": 32,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 718207
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:210"
+            }
+          }
+        ]
+      },
+      {
+        "name": "(Negative) Create the Cart Item without the custom headers",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;(negative)-create-the-cart-item-without-the-custom-headers",
+        "line": 34,
+        "keyword": "Scenario",
+        "description": "As a Carts API consumer\nI would like to call the Carts API without the custom headers\nSo that I get a Bad request error",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 79381
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set query parameters to",
+            "line": 39,
+            "keyword": "Given ",
+            "rows": [
+              {
+                "cells": [
+                  "parameter",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "include",
+                  "cart"
+                ]
+              }
+            ],
+            "result": {
+              "status": "passed",
+              "duration": 121882
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:46"
+            }
+          },
+          {
+            "name": "I pipe contents of file ./CreateCart.json to body",
+            "line": 42,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 662178
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:36"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 43,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 174562
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I create cart",
+            "line": 44,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 180115899
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:16"
+            }
+          },
+          {
+            "name": "response code should be 400",
+            "line": 45,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 156200
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 46,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 117615
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "response body path $.errors.error[0].code should be SECURITY-0052",
+            "line": 47,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 221538
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:210"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Create the Cart Item",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;create-the-cart-item",
+        "line": 49,
+        "keyword": "Scenario",
+        "description": "As a Carts API consumer\nI would like to call the Carts API\nSo that I can create a Cart",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114628
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set query parameters to",
+            "line": 54,
+            "keyword": "Given ",
+            "rows": [
+              {
+                "cells": [
+                  "parameter",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "include",
+                  "cart"
+                ]
+              }
+            ],
+            "result": {
+              "status": "passed",
+              "duration": 157847
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:46"
+            }
+          },
+          {
+            "name": "I pipe contents of file ./CreateCart.json to body",
+            "line": 57,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 464208
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:36"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 58,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 256538
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 59,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 77998
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I create cart",
+            "line": 60,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 3583116512
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:16"
+            }
+          },
+          {
+            "name": "response code should be 200",
+            "line": 61,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 218709
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 62,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 734789
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "I store the value of body path $.cart.@cartId as CartId in global scope",
+            "line": 63,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 808748
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:274"
+            }
+          },
+          {
+            "name": "I store the value of body path $.cart.cartItem[0].@cartItemId as CartItemId in global scope",
+            "line": 64,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 581515
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:274"
+            }
+          }
+        ]
+      },
+      {
+        "name": "(Negative) Get the Cart Item without passing a Cart Id",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;(negative)-get-the-cart-item-without-passing-a-cart-id",
+        "line": 2,
+        "keyword": "Scenario",
+        "description": "As a Carts API Consumer\nI would like to call the get Cart info without passing a valid id\nSo that I can display the error in my app",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105654
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 7,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 618082
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 8,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 98449
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I get cart for /",
+            "line": 9,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 142774203
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:36"
+            }
+          },
+          {
+            "name": "response code should be 400",
+            "line": 10,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 187682
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 11,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 124890
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "response body path $.errors.error[0].code should be GENERAL-0001",
+            "line": 12,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 173526
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:210"
+            }
+          }
+        ]
+      },
+      {
+        "name": "(Negative) Get the Cart Item passing an invalid Cart Id",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;(negative)-get-the-cart-item-passing-an-invalid-cart-id",
+        "line": 14,
+        "keyword": "Scenario",
+        "description": "As a Carts API Consumer\nI would like to call the get Cart info with an invalid id\nSo that I can display the error in my app",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127768
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 19,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 290747
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 20,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 85521
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I get cart for abc123",
+            "line": 21,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 341517790
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:36"
+            }
+          },
+          {
+            "name": "response code should be 503",
+            "line": 22,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 116695
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 105641
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "response body path $.errors.error[0].code should be SYSTEM-1001",
+            "line": 24,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 158747
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:210"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Get the Cart Item",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;get-the-cart-item",
+        "line": 26,
+        "keyword": "Scenario",
+        "description": "As a Carts API Consumer\nI would like to get the Cart info\nso that I can display in my app",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 271364
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 31,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 256147
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 32,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 147190
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I get cart created",
+            "line": 33,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 325003614
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:26"
+            }
+          },
+          {
+            "name": "response code should be 200",
+            "line": 34,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 121104
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          },
+          {
+            "name": "response body should be valid json",
+            "line": 35,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 423596
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:137"
+            }
+          },
+          {
+            "name": "value of body path $.cart.@cartId should match with CartId in global scope",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 651637
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:46"
+            }
+          },
+          {
+            "name": "value of body path $.cart.cartItem[0].@cartItemId should match with CartItemId in global scope",
+            "line": 37,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 343294
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:46"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Update the Cart Item",
+        "id": "As-a-Cart-API-consumer,-I-want-to-create-a-Cart;update-the-cart-item",
+        "line": 2,
+        "keyword": "Scenario",
+        "description": "As a Carts API Consumer\nI would like to update the Cart info for a given CartId\nso that I can display the updated cart in my app",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 135666
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:24"
+            }
+          },
+          {
+            "name": "I set the custom headers",
+            "line": 7,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 240483
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/init.js:31"
+            }
+          },
+          {
+            "name": "I set bearer token",
+            "line": 8,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 90718
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:264"
+            }
+          },
+          {
+            "name": "I pipe contents of file ./UpdateCart.json to body",
+            "line": 9,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 395961
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:36"
+            }
+          },
+          {
+            "name": "I update cart",
+            "line": 10,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 1178987657
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/carts.js:55"
+            }
+          },
+          {
+            "name": "response code should be 204",
+            "line": 11,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 106906
+            },
+            "match": {
+              "location": "/Users/saisaranvaidyanathan/GitHub/tmo-ci-poc/Cart/target/tests/integration/features/step_definitions/apickli-gherkin.js:147"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

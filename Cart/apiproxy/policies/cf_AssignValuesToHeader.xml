@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignValuesToHeader">
+	<AssignVariable>
+		<Name>request.header.senderid</Name>
+		<Ref>senderid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.channelid</Name>
+		<Ref>channelid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.applicationid</Name>
+		<Ref>applicationid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+        <Name>applicationuserid</Name>
+        <Ref>request.header.applicationuserid</Ref>
+    </AssignVariable>
+	<AssignVariable>
+		<Name>request.header.activityid</Name>
+		<Ref>activityid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.interactionid</Name>
+		<Ref>interactionid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.sessionid</Name>
+		<Ref>sessionid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.userid</Name>
+		<Ref>userid</Ref>
+	</AssignVariable>
+	
+	<AssignVariable>
+		<Name>request.header.dealercode</Name>
+		<Ref>dealercode</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.masterdealercode</Name>
+		<Ref>masterDealerCode</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.workflowid</Name>
+		<Ref>workflowid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>storeid</Name>
+		<Ref>request.header.storeid</Ref>
+	</AssignVariable>
+
+	<AssignVariable>
+		<Name>servicetransacationid</Name>
+		<Ref>request.header.servicetransacationid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.disableentitlementsflow</Name>
+		<Ref>disableentitlementsflow</Ref>
+	</AssignVariable>
+
+	<!-- Target System name -->
+	<AssignVariable>
+		<Name>request.header.targetroutesystem</Name>
+		<Ref>capi.target.route.system</Ref>
+	</AssignVariable>
+
+    <AssignVariable>
+        <Name>request.header.cacheaccessutilprotocol</Name>
+        <Ref>cacheaccessutilprotocol</Ref>
+    </AssignVariable>
+    
+    <AssignVariable>
+        <Name>request.header.cacheaccessutilappauthorization</Name>
+        <Ref>cacheAccessUtilAppAuthorization</Ref>
+    </AssignVariable>
+    <AssignVariable>
+		<Name>request.header.authcustomerid</Name>
+		<Ref>authcustomerid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.authfinancialaccountid</Name>
+		<Ref>authfinancialaccountid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>request.header.authlineofserviceid</Name>
+		<Ref>authlineofserviceid</Ref>
+	</AssignVariable>
+
+	
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

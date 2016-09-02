@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="getCartStatus_ProxyResponseXSL">
+    <Source>response</Source>
+    <ResourceURL>xsl://getCartStatus_ProxyResponse.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true" >
+        <Parameter name="acceptType" ref="request.header.Accept"/>
+    </Parameters>
+</XSL>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="createCart_GetFinancialAccountDetailsExtractVariable">
+   <Source>getFinancialAccountDetailsResponse</Source>
+   <XMLPayload>
+      <Namespaces>
+         <Namespace prefix="soapenv">http://schemas.xmlsoap.org/soap/envelope/</Namespace>
+         <Namespace prefix="v1">http://services.tmobile.com/CustomerManagement/FinancialAccountDetailsWSIL/V1</Namespace>
+         <Namespace prefix="base">http://services.tmobile.com/base</Namespace>			
+      </Namespaces>      
+      <Variable name="customerId" type="string">
+         <XPath>/soapenv:Envelope/soapenv:Body/v1:getFinancialAccountDetailsResponse/v1:customerId</XPath>
+      </Variable>
+      <Variable name="financialAccountNumber" type="string">
+         <XPath>/soapenv:Envelope/soapenv:Body/v1:getFinancialAccountDetailsResponse/v1:financialAccountDetailsList/v1:financialAccount/v1:financialAccountNumber</XPath>
+      </Variable>
+   </XMLPayload>
+   <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

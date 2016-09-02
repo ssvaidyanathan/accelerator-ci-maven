@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignApiErrorRaiseFaultNoAuthReturned">
+	<AssignVariable>
+		<Name>apiError</Name>
+      <Value><![CDATA[
+			<apiError>
+				<statusCode>401</statusCode>
+				<reasonPhrase>"Unauthorized"</reasonPhrase>
+				<errors>
+					<error>
+						<code>"ID1"</code>
+						<userMessage>"Unauthorized"</userMessage>
+					</error>
+				</errors>
+			</apiError>
+			]]>
+	  </Value>
+	</AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

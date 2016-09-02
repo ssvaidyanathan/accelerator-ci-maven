@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="createCart_GetFinancialAccountDetails_ResponseValidation">
+    <Source>getFinancialAccountDetailsResponse</Source>
+    <ResourceURL>xsl://createCart_GetFinancialAccountDetails_ResponseValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true"/>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

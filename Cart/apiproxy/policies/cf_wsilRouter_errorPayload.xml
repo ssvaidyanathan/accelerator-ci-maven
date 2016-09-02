@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="cf_wsilRouter_errorPayload">
+    <DisplayName>cf_wsilRouter_errorPayload</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://cf_wsilRouter_errorPayload.js</ResourceURL>
+</Javascript>

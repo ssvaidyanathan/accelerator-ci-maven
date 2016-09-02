@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updateCart_TargetRequestXSL">
+	<Source>request</Source>
+	<ResourceURL>xsl://updateCart_TargetRequest.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >
+		
+		<Parameter name="senderId" ref="senderid" />
+		<Parameter name="channelId" ref="channelid" />
+		<Parameter name="applicationId" ref="applicationid" />
+		<Parameter name="applicationUserId" ref="applicationuserid"/>
+		<Parameter name="sessionId" ref="sessionid" />
+		<Parameter name="workflowId" ref="workflowid" />
+		<Parameter name="activityId" ref="activityid" />
+		<Parameter name="timestamp" ref="timestamp" />
+		<Parameter name="storeId" ref="storeid" />
+		<Parameter name="dealerCode" ref="dealercode" />
+		<Parameter name="interactionId" ref="interactionid" />
+		<Parameter name="userId" ref="userid"/>
+		<Parameter name="scope" ref="scope" />
+		<Parameter name="masterDealerCode" ref="masterDealerCode" />
+		<Parameter name="serviceTransactionId" ref="messageid" />	
+		<Parameter name="systemId" ref="systemid" />
+		
+		<Parameter name="userCompanyId" ref="usercompanyid" />
+		<Parameter name="customerCompanyId" ref="customercompanyid" />
+		<Parameter name="servicePartnerId" ref="servicepartnerid" />
+		<Parameter name="transactionType" ref="transactiontype" />
+		<Parameter name="providerId" ref="providerid" />
+		<Parameter name="contextId" ref="contextid" />
+		
+		<Parameter name="cartId" ref="cartId"/>
+		<Parameter name="ABFEntitlements" ref="ABFEntitlements"/>
+		<Parameter name="supervisorEntitlementsVar1" ref="supervisorEntitlementsVar1"/>
+		<Parameter name="supervisorEntitlementsVar2" ref="supervisorEntitlementsVar2"/>
+		<Parameter name="supervisorEntitlementsVar3" ref="supervisorEntitlementsVar3"/>
+		<Parameter name="supervisorEntitlementsVar4" ref="supervisorEntitlementsVar4"/>
+		<Parameter name="supervisorEntitlementsVar5" ref="supervisorEntitlementsVar5"/>
+		
+		<Parameter name="supervisorId1" ref="supervisorId1"/>
+		<Parameter name="supervisorId2" ref="supervisorId2"/>
+		<Parameter name="supervisorId3" ref="supervisorId3"/>
+		<Parameter name="supervisorId4" ref="supervisorId4"/>
+		<Parameter name="supervisorId5" ref="supervisorId5"/>
+		
+		<Parameter name="channelCode" 	 ref="salesChannelCode"/>
+		<Parameter name="subChannelCode" ref="salesSubChannelCode"/>
+		<Parameter name="category" 		 ref="subChannelCategory"/>
+		
+		<Parameter name="app_channelCode" ref="app_channelCode"/>
+		<Parameter name="app_subChannelCode" ref="app_subChannelCode"/>
+		<Parameter name="app_category" ref="app_category"/>
+		<Parameter name="tokenScope" ref="tokenScope"/>
+		
+	</Parameters>
+</XSL>

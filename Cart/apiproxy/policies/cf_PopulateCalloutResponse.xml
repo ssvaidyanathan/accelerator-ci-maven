@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="cf_PopulateCalloutResponse">
+    <DisplayName>cf_PopulateCalloutResponse</DisplayName>
+    <Properties/>
+    <CacheKey>
+      <Prefix>permission</Prefix>
+      <KeyFragment ref="masterDealerCode"/>
+    </CacheKey>
+  <CacheResource>usercache</CacheResource>
+    <Scope>Global</Scope>
+    <Source>callout.response</Source>
+</PopulateCache>

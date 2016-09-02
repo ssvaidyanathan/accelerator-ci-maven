@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updatePaymentDetails_ProxyResponseXSL">
+    <Properties/>
+    <Source>response</Source>
+    <ResourceURL>xsl://updatePaymentDetails_ProxyResponse.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true" />
+</XSL>

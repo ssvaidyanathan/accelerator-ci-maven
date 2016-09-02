@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_CreateEnterpriseUserCustomerEntitlementsServiceRequest">
+	<Source>dummymessage</Source>
+	<ResourceURL>xsl://cf_CreateEnterpriseUserCustomerEntitlementsServiceRequest.xslt</ResourceURL>
+	<OutputVariable>esprequest</OutputVariable>
+	<Parameters ignoreUnresolvedVariables="true" >
+		<Parameter name="senderid" ref="senderid"/>
+		<Parameter name="channelid" ref="channelid"/>
+		<Parameter name="applicationid" ref="applicationid"/>
+		<Parameter name="applicationUserid" ref="applicationuserid"/>
+		<Parameter name="sessionId" ref="sessionid"/>
+		<Parameter name="workflowId" ref="workflowid"/>
+		<Parameter name="activityId" ref="activityid"/>
+		<Parameter name="timestamp" ref="request.header.timestamp"/>
+		<Parameter name="storeId" ref="storeid"/>
+		<Parameter name="dealerCode" ref="dealercode"/>
+		<Parameter name="interactionId" ref="interactionid"/>
+		<Parameter name="userId" ref="userid"/>
+		<Parameter name="scope" ref="request.header.scope"/>
+		<Parameter name="masterDealerCode" ref="masterDealerCode"/>
+		<Parameter name="serviceTransactionId" ref="messageid"/>
+		<Parameter name="systemId" ref="request.header.systemid"/>
+		<Parameter name="userCompanyId" ref="request.header.usercompanyid"/>
+		<Parameter name="customerCompanyId" ref="request.header.customercompanyid"/>
+		<Parameter name="servicePartnerId" ref="request.header.servicepartnerId"/>
+		<Parameter name="transactionType" ref="request.header.transactiontype"/>
+		<Parameter name="providerId" ref="providerid"/>
+		<Parameter name="contextId" ref="contextid"/>
+		<Parameter name="authcustomerid" ref="authcustomerid"/>
+		<Parameter name="authfinancialaccountid" ref="authfinancialaccountid"/>
+		<Parameter name="authlineofserviceid" ref="authlineofserviceid"/>
+	</Parameters>
+</XSL>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageValidation async="false" continueOnError="false" enabled="true" name="updatePaymentDetails_InputValidation">
+    <DisplayName>updatePaymentDetails_InputValidation</DisplayName>
+    <!-- 
+    <Element>updateCartStatusRequest</Element>
+    <ResourceURL>xsd://CartSpecification.xsd</ResourceURL>
+	-->
+</MessageValidation>

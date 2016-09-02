@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignFacadeRequestBasePathIfNull">
+
+    <!-- boolean (true/false) flag to control entilements flow -->
+    <AssignVariable>
+        <Name>request.header.facaderequestbasepath</Name>
+        <Value></Value>
+    </AssignVariable>	
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

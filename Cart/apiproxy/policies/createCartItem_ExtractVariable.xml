@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="createCartItem_ExtractVariable">
+   <URIPath>
+      <Pattern ignoreCase="true">/{cartId}/cartitem</Pattern>
+   </URIPath>
+   <!--VariablePrefix>flow.cart.request</VariablePrefix-->
+   <XMLPayload stopPayloadProcessing="false">
+      
+      
+      <Variable name="productOfferingIdRequest">
+         <XPath>//cartItem/productOffering/@productOfferingId</XPath>
+      </Variable>
+      
+      <Variable name="lineOfServiceIdRequest">
+         <XPath>//cartItem/lineOfService/@lineOfServiceId</XPath>
+      </Variable>
+      
+      <Variable name="assignedProductIdRequest">
+         <XPath>//cartItem/lineOfService/assignedProduct/@assignedProductId</XPath>
+      </Variable>
+   </XMLPayload>
+   <VariablePrefix>flow.cart.request</VariablePrefix>
+   <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

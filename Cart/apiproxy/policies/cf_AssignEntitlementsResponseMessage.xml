@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignEntitlementsResponseMessage">
+    <Set>
+        <Headers>
+            <Header name="Content-Type">text/xml</Header>
+        </Headers>
+        <Payload>{userEntitlements}</Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request">entitlementscachemsg</AssignTo>
+</AssignMessage>

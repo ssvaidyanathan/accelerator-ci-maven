@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="cf_ExtractErrorDetails">
+	<XMLPayload stopPayloadProcessing="false">
+		<Variable name="statusCode" type="string">
+			<XPath>//apiError/statusCode</XPath>
+		</Variable>
+		<Variable name="reasonPhrase" type="string">
+			<XPath>//apiError/reasonPhrase</XPath>
+		</Variable>
+		<Variable name="payLoad" type="nodeset">
+			<XPath>//apiError/errors</XPath>
+		</Variable>     
+	</XMLPayload>
+</ExtractVariables>

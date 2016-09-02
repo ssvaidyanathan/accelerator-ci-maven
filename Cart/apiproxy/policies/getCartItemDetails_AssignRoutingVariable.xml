@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="getCartItemDetails_AssignRoutingVariable">
+    
+    <!-- Target Service name -->
+    <AssignVariable>
+        <Name>capi.target.route.service</Name>
+        <Value>CartWSIL</Value>
+    </AssignVariable>
+    
+    <!-- Target  Action name -->    
+    <AssignVariable>
+        <Name>capi.target.route.operation</Name>
+        <Value>getCartDetails</Value>
+    </AssignVariable>
+    
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

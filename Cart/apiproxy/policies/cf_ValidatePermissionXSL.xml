@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_ValidatePermissionXSL">
+    <DisplayName>cf_ValidatePermissionXSL</DisplayName>
+    <Properties/>
+    <Source>callout.response</Source>
+    <ResourceURL>xsl://cf_ValidatePermissionXSL.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="false">
+      <Parameter name="facadeproxybasepath" ref="request.header.facaderequestbasepath"/>
+      <Parameter name="uripathdefinition" ref="requestpath.definition"/>
+      <Parameter name="verb" ref="capi.request.verb"/>
+    </Parameters>
+    <OutputVariable>permissionCache</OutputVariable>
+</XSL>

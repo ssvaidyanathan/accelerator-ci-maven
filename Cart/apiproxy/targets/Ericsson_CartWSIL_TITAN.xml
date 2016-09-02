@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="Ericsson_CartWSIL_TITAN">
+    <Description>Cart Target Endpoint</Description>
+	
+	<FaultRules>
+				<!--Added wsilRouter fault handling for ODP to WSIL call thru Core API
+			Note: Don't change the order, if the condition does not match then standard fault handling will work 		
+		-->
+		<FaultRule name="wsilRouter">
+            <Condition>(resource.name = "wsilRouter")</Condition>
+            <Step>
+                <Condition>(!((response = "") or (response is null)) and (raisefault.cf_RaiseFaultRedirectToFaultHandling.failed = true))</Condition>
+                <Name>cf_AssignMessageContentToSOAPResp</Name>
+            </Step>
+            <Step>
+                <Name>cf_SoapToXmlResponse</Name>
+            </Step>
+            <Step>
+                <Name>cf_wsilRouter_errorPayload</Name>
+            </Step>
+            <!-- Capture log details -->
+            <Step>
+                <Name>cf_elf_AssignTargetError</Name>
+            </Step>
+            <!-- Remove line breaks -->
+            <Step>
+                <Name>cf_CleanupELFLog</Name>
+            </Step>
+            <Step>
+                <Name>cf_TargetFaultErrorResponse</Name>
+            </Step>
+        </FaultRule>
+        <!-- standard fault handling -->
+        <FaultRule name="FaultHandling">
+            <Step>
+                <Condition>(!((response = "") or (response is null)) and (raisefault.cf_RaiseFaultRedirectToFaultHandling.failed = true))</Condition>
+                <Name>cf_AssignMessageContentToSOAPResp</Name>
+            </Step>
+            <Step>
+                <Condition>(!((response = "") or (response is null)) and (raisefault.cf_RaiseFaultRedirectToFaultHandling.failed = true))</Condition>
+                <Name>cf_ResponseStatusToErrorXSL</Name>
+            </Step>
+            <Step>
+                <Condition>((response is null) or (response = ""))</Condition>
+                <Name>cf_AssignDummyAPIError</Name>
+            </Step>
+            <Step>
+                <Name>cf_AssignErrorRespMessage</Name>
+            </Step>
+            <Step>
+                <Condition>((response is null) or (response = ""))</Condition>
+                <Name>cf_ParseFaultHandler</Name>
+            </Step>
+            <Step>
+                <Name>cf_ExtractTargetErrorDetails</Name>
+            </Step>
+            <Step>
+                <Condition>((errorCount >= 1) and (not((errorCode1 is null) or (errorCode1 = ""))))</Condition>
+                <Name>cf_HttpCodeLookupForError1</Name>
+            </Step>
+            <Step>
+                <Condition>((errorCount >= 1) and (not((errorCode2 is null) or (errorCode2 = ""))))</Condition>
+                <Name>cf_HttpCodeLookupForError2</Name>
+            </Step>
+            <Step>
+                <Condition>((errorCount >= 1) and (not((errorCode3 is null) or (errorCode3 = ""))))</Condition>
+                <Name>cf_HttpCodeLookupForError3</Name>
+            </Step>
+            <Step>
+                <Condition>((errorCount >= 1) and (not((errorCode4 is null) or (errorCode4 = ""))))</Condition>
+                <Name>cf_HttpCodeLookupForError4</Name>
+            </Step>
+            <Step>
+                <Condition>((errorCount >= 1) and (not((errorCode5 is null) or (errorCode5 = ""))))</Condition>
+                <Name>cf_HttpCodeLookupForError5</Name>
+            </Step>
+            <Step>
+                <Condition>(errorCount >= 1)</Condition>
+                <Name>cf_HttpCodeLookupCommonErrorCodeMap</Name>
+            </Step>
+            <Step>
+                <Name>cf_ConcatenateErrorCodeMaps</Name>
+            </Step>       
+            <Step>
+                <Condition>(not(((errorCodeMap1 = "") or (errorCodeMap1 is null)) and ((commonErrorCodeMap = "") or (commonErrorCodeMap is null))))</Condition>
+                <Name>cf_AssignErrorCodeMapMessage</Name>
+            </Step>                  
+            <Step>
+                <Condition>(((errorCodeMap1 = "") or (errorCodeMap1 is null)) and ((commonErrorCodeMap = "") or (commonErrorCodeMap is null)))</Condition>
+                <Name>cf_AssignDummyErrorCodeMapMessage</Name>
+            </Step>                  
+            <Step>
+                <Name>cf_ErrorCodeMapVarsXSL</Name>
+            </Step>       
+            <Step>
+                <Name>cf_ExtractErrorCodeMapVars</Name>
+            </Step>
+            <Step>
+                <Condition>!(request.header.Accept JavaRegex ".*xml*.*")</Condition>
+                <Name>cf_AssignAPIErrorToRespMessage</Name>
+            </Step>
+            <Step>
+                <Condition>!(request.header.Accept JavaRegex ".*xml*.*")</Condition>
+                <Name>cf_AssignDummyErrorObjXSL</Name>
+            </Step>
+             <Step>
+                <Condition>!(request.header.Accept JavaRegex ".*xml*.*")</Condition>
+                <Name>cf_errorXMLtoJSON</Name>
+            </Step>
+            <Step>
+                <Condition>!(request.header.Accept JavaRegex ".*xml*.*")</Condition>
+                <Name>cf_CleanupErrJsonPayload</Name>
+            </Step>
+			<!-- Capture log details -->
+            <Step>
+                <Name>cf_elf_AssignTargetError</Name>
+            </Step>
+			<!-- Remove line breaks -->
+            <Step>
+                <Name>cf_CleanupELFLog</Name>
+            </Step>			
+            <Step>
+                <Name>cf_TargetFaultErrorResponse</Name>
+            </Step>
+        </FaultRule>
+	</FaultRules>
+
+	<DefaultFaultRule>
+		
+	</DefaultFaultRule>
+
+    <PreFlow name="PreFlow">
+
+		<Request>
+						<!-- Capture log details -->
+            <Step>
+                <Name>cf_elf_AssignTargetPreFlowReq</Name>
+            </Step>
+						<Step>
+                <Name>Ericsson_CartWSIL_AssignTargetSystem</Name>
+            </Step>
+		</Request>
+		
+		<Response>
+			
+<Step>
+	<Name>cf_AssignTargetMsgDetails</Name>
+</Step>
+
+<!-- Raise fault for SOAP fault from target -->
+<Step>
+	<Condition>((response.content JavaRegex "(?s).*code=.10[2,3,4].*") or (response.content JavaRegex "(?s).*serviceStatusCode.10[2,3,4].*") or (response.content JavaRegex "(?s).*faultcode.*"))</Condition>
+	<Name>cf_RaiseFaultRedirectToFaultHandling</Name>
+</Step>
+
+			
+		</Response>
+
+    </PreFlow>
+	<Flows>
+
+        <Flow name="getCartDetails"> 
+        	<Condition>(capi.target.route.operation = &quot;getCartDetails&quot;)</Condition>         
+			#Ericsson_CartWSIL_getCartDetails_req#
+			#Ericsson_CartWSIL_getCartDetails_resp#
+        </Flow>
+
+        <Flow name="getShippingOptions"> 
+        	<Condition>(capi.target.route.operation = &quot;getShippingOptions&quot;)</Condition>         
+			#Ericsson_CartWSIL_getShippingOptions_req#
+			#Ericsson_CartWSIL_getShippingOptions_resp#
+        </Flow>
+
+        <Flow name="updateCart"> 
+        	<Condition>(capi.target.route.operation = &quot;updateCart&quot;)</Condition>         
+			#Ericsson_CartWSIL_updateCart_req#
+			#Ericsson_CartWSIL_updateCart_resp#
+        </Flow>
+		
+		<Flow name="getCartItemDetails"> 
+			<Condition>(capi.target.route.operation = &quot;getCartItemDetails&quot;)</Condition>         
+			#Ericsson_CartWSIL_getCartItemDetails_req#
+			#Ericsson_CartWSIL_getCartItemDetails_resp#
+		</Flow>
+		
+		<!-- target common flows -->
+		<Flow name="unknown-resource">
+            <Request>
+                <Step>
+                    <Name>cf_Unknown_Operation</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>			
+
+	</Flows>
+    <PostFlow name="PostFlow">
+
+		<Request>
+				<!--		<Step>
+                <Name>cf_replaceEntitlementElementsPrefix</Name>
+            </Step> -->
+			
+            
+			<Step>
+                <Name>cf_RetrieveWSSAuth</Name>
+            </Step>
+            <Step>
+                <Name>cf_AssignTargetSOAPRequest</Name>
+            </Step>
+
+		</Request>
+		
+		<Response>
+			
+			
+		</Response>
+		
+    </PostFlow>
+    <HTTPTargetConnection>
+      	<LoadBalancer>
+      		<Server name="CartWSIL_TITAN_Target">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>/services/CartWSIL</Path> 
+        <Properties>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">360000</Property>
+		</Properties>
+        		
+    </HTTPTargetConnection>
+</TargetEndpoint>

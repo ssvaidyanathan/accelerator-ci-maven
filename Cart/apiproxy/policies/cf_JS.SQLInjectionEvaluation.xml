@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="cf_JS.SQLInjectionEvaluation">
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://cf_sqlInjectionEvaluation.js</ResourceURL>
+</Javascript>

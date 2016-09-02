@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="true" enabled="true" name="cf_ErrorCodeMapVarsXSL">
+    <Source>errormapmessage</Source>
+    <ResourceURL>xsl://cf_ErrorCodeMapVarsXSL.xslt</ResourceURL>    
+    <Parameters ignoreUnresolvedVariables="false">
+    	<Parameter name="targetname" ref="target.name" />
+    	<Parameter name="servicename" ref="capi.target.route.service" />
+    	<Parameter name="operationname" ref="capi.target.route.operation" />
+    	<Parameter name="apirequesturl" ref="requestpath.definition" />
+    	<Parameter name="apirequestverb" ref="capi.request.verb" /> 
+    	<Parameter name="apiErrorParam" ref="apiError" />    
+    </Parameters>
+</XSL>

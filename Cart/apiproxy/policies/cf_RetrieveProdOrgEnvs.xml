@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="true" enabled="true" name="cf_RetrieveProdOrgEnvs" mapIdentifier="EnvConfig">
+    <DisplayName>cf_RetrieveProdOrgEnvs</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+	<InitialEntries>
+      <Entry>
+         <Key>
+            <Parameter>ProdOnPremOrgEnvs</Parameter>
+         </Key>
+         <Value>tmobileprd,core,stgcore</Value>
+      </Entry>
+      <Entry>
+         <Key>
+            <Parameter>ProdSaaSOrgEnvs</Parameter>
+         </Key>
+         <Value>tmobileprd,prd01</Value>
+      </Entry>
+      <Entry>
+         <Key>
+            <Parameter>NonProdOnPremOrgEnvs</Parameter>
+         </Key>
+         <Value>plab01,plab02,plab03</Value>
+      </Entry>
+   </InitialEntries>
+    <Get assignTo="ProdOnPremOrgEnvs">
+        <Key>
+            <Parameter>ProdOnPremOrgEnvs</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="ProdSaaSOrgEnvs">
+        <Key>
+            <Parameter>ProdSaaSOrgEnvs</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="NonProdOnPremOrgEnvs">
+        <Key>
+            <Parameter>NonProdOnPremOrgEnvs</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>
+

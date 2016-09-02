@@ -1,0 +1,7 @@
+{
+	"cartApi": {
+		"domain": "demo-test.apigee.net",
+		"basepath": "/v1/cart-poc",
+		"propsFile": "DIT01.postman_environment.json"
+	}
+}
