@@ -48,7 +48,7 @@
 				<apigee.org>${env.APIGEE_ORG}</apigee.org>
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
-				<apigee.options>update</apigee.options>
+				<apigee.options>override</apigee.options>
 				<api.northbound.domain>${env.API_DOMAIN_TEST}</api.northbound.domain>
 				<api.testtag>~@wip</api.testtag>
 			</properties>
@@ -235,7 +235,7 @@
 			</plugin>
 
 			<!-- cleaning dirs -->
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>2.5</version>
 
@@ -255,7 +255,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 
