@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JSONToXML async="false" continueOnError="false" enabled="true" name="cf_JSONtoXML">
+    <Options>
+        <NullValue>NULL</NullValue>
+        <TextNodeName>#text</TextNodeName>
+        <AttributePrefix>@</AttributePrefix>
+    </Options>
+    <OutputVariable>request</OutputVariable>
+    <Source>request</Source>
+</JSONToXML>

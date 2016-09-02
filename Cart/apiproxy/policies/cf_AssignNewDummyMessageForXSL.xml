@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignNewDummyMessageForXSL">
+    <Set>
+        <Headers>
+            <Header name="Content-Type">text/xml</Header>
+        </Headers>
+        <Payload>
+            <dummyroot>
+                <value>dummyvalue</value>
+            </dummyroot>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request">dummymessage</AssignTo>
+</AssignMessage>

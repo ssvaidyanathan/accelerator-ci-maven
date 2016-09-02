@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_elf_AssignEnterpriseEntitlementsServiceReqRes">
+	<AssignVariable>
+		<Name>elfLog.OES.ServiceCalloutEnabled</Name>
+		<Value>true</Value>
+	</AssignVariable>
+ 	<AssignVariable>
+		<Name>elfLog.OES.targetURI</Name>
+		<Value>/ess/EnterpriseEntitlementsService</Value>
+	</AssignVariable>
+ 	<AssignVariable>
+		<Name>elfLog.OES.targetRequest</Name>
+		<Ref>essrequest</Ref>
+	</AssignVariable>
+ 	<AssignVariable>
+		<Name>elfLog.OES.targetResponse</Name>
+		<Ref>callout.response.content</Ref>
+	</AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

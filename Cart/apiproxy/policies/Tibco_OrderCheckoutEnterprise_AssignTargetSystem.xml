@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Tibco_OrderCheckoutEnterprise_AssignTargetSystem">
+    <DisplayName>Tibco_OrderCheckoutEnterprise_AssignTargetSystem</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <AssignVariable>
+        <Name>wss.targetSystem</Name>
+        <Value>wssTibco</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="createCartItem_AssignResponseMessage">
+    
+    <FaultRules/>
+    <Properties/>  
+    <Set>
+        <Headers> 
+            <Header name="Location">/v1/cart/{cartId}/cartitem/{cartItemID}</Header>
+        </Headers>
+        <!--{flow.cart.response.responseCode}-->
+        <Payload contentType="text/xml">{flow.cart.response}</Payload>
+        <StatusCode>201</StatusCode>
+        <ReasonPhrase>Created</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

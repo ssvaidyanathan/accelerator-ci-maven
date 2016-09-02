@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="cf_CallUserCustomerEnterpriseEntitlementsService_TITAN">
+    <DisplayName>cf_CallUserCustomerEnterpriseEntitlementsService_TITAN</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+         	<Headers>
+        		<Header name="Authorization">{capi.target.request.tibcoAuth}</Header>
+        	</Headers>
+            <Payload contentType="text/xml">{esprequest}</Payload>
+            <Verb>POST</Verb>
+        </Set>
+    </Request>
+    <Response>entitlementscachemsg</Response>
+    <HTTPTargetConnection>
+        <LoadBalancer>
+            <Server name="UserSecurityEnterprise_TIBCO_TITAN_Target">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>/service/soap/SecurityManagement/UserSecurityEnterprise/V1</Path>
+    </HTTPTargetConnection>
+</ServiceCallout>

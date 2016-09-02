@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="updatePPUdetails_ExtractVariable">
+    <URIPath>
+        <Pattern ignoreCase="true">/{updatePPUdetails.cartid}/PPUdetails</Pattern>
+    </URIPath>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

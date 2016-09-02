@@ -51,7 +51,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
-USER jenkins
+USER jenkins:
 
 ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins-entrypoint.sh"]
 

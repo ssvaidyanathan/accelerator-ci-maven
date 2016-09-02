@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="getCartItem_ProxyResponseXSL">
+    <Source>response</Source>
+	<ResourceURL>xsl://getCartItem_ProxyResponse.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >		
+		<Parameter name="cartItemId" ref="request.queryparam.cartItemId"/>
+	</Parameters>
+</XSL>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignGETRequestPayload">
+ 	<AssignVariable>
+		<Name>request.header.Content-Type</Name>
+		<Value>text/xml</Value>
+	</AssignVariable>
+	<!-- Assign dummy request data so that XSL transformation will work -->  
+	<AssignVariable>
+		<Name>message.content</Name>
+      <Value>&lt;GETOpernCalled/></Value>
+	</AssignVariable>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

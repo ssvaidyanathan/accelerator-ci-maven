@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="createCartItem_Extract-CartItem">
+	<DisplayName>Extract Create CartItem Response</DisplayName>
+	<FaultRules/>
+	
+	<Source>response</Source>
+	
+	<XMLPayload stopPayloadProcessing="false">
+		
+		<Variable name="cartId">
+			<XPath>//createCartItemResponse/cart/cartId</XPath>
+		</Variable>
+		
+		<Variable name="cartItemID">
+			<XPath>//createCartItemResponse/cart/cartItemId</XPath>
+		</Variable>
+	</XMLPayload>
+	
+</ExtractVariables>

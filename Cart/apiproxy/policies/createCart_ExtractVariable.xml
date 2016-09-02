@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="createCart_ExtractVariable">
+   <URIPath>
+      <Pattern ignoreCase="true">/uri/{createCart.PathParam}</Pattern>
+   </URIPath>
+   <QueryParam name="createCart.QueryParam">
+      <Pattern ignoreCase="true">{QueryParam}</Pattern>
+   </QueryParam>
+   <XMLPayload stopPayloadProcessing="false">
+      <Variable name="cartItemTransactionType">
+         <XPath>/cart/cartItem[1]/transactionType</XPath>
+      </Variable>
+      <Variable name="msisdn">
+         <XPath>/cart/cartItem[1]/networkResource[1]/mobileNumber/msisdn</XPath>
+      </Variable>
+   </XMLPayload>
+   <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

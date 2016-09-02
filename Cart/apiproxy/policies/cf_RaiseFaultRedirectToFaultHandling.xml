@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault enabled="true" continueOnError="false" async="false" name="cf_RaiseFaultRedirectToFaultHandling">
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+  <FaultResponse>
+    <Set>
+      <Headers />
+      <Payload />
+    </Set>
+  </FaultResponse>
+</RaiseFault>

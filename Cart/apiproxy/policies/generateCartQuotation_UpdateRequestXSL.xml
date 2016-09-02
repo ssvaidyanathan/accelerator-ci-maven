@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="generateCartQuotation_UpdateRequestXSL">
+	<Source>request</Source>
+	<ResourceURL>xsl://generateCartQuotation_UpdateRequest.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true"/>
+</XSL>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLToJSON async="false" continueOnError="false" enabled="true" name="cf_errorXMLtoJSON">
+     <Options>
+     	<RecognizeNull>true</RecognizeNull>
+        <NullValue/>
+        <RecognizeNumber>false</RecognizeNumber>
+    </Options>
+    <OutputVariable>payLoad</OutputVariable>
+    <Source>message</Source>
+</XMLToJSON>

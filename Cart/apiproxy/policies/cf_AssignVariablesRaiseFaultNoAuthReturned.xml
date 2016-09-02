@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignVariablesRaiseFaultNoAuthReturned">
+    <DisplayName>cf_AssignVariablesRaiseFaultNoAuthReturned</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <AssignVariable>
+        <Name>subStatusDesc</Name>
+        <Value>No valid response from EnterpriseEntitlementsService</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>statusDetail</Name>
+        <Value>Internal Server Error</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>statusCode</Name>
+        <Value>500</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>subStatusCode</Name>
+        <Value>SYSTEM-0000</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

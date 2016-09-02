@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="generateCartQuotation_ProxyResponseXSL">
+    <FaultRules/>
+    <Properties/>
+    <Source>response</Source>
+    <ResourceURL>xsl://generateCartQuotation_ProxyResponse.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="pARRAY" value="~ARRAY~"/>
+        <Parameter name="pINTEGER" value="~INT~"/>
+        <Parameter name="acceptType" ref="request.header.Accept"/>
+        <Parameter name="include" ref="queryparams.include"/>
+        <Parameter name="exclude" ref="queryparams.exclude"/>
+    </Parameters>
+</XSL>

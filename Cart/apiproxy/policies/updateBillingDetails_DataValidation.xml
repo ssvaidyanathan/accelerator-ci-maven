@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="updateBillingDetails_DataValidation">
+    <DisplayName>updateBillingDetails_DataValidation</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://updateBillingDetails_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="cartId" ref="flow.cart.request.cartId" />
+        <Parameter name="tokenScope" ref="tokenScope"/>
+        <Parameter name="authfinancialaccountid" ref="authfinancialaccountid"/>
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

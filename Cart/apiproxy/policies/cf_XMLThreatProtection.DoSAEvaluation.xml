@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLThreatProtection name="cf_XMLThreatProtection.DoSAEvaluation">
+    <Source>request</Source>
+    <StructureLimits>
+        <NodeDepth>15</NodeDepth>
+        <AttributeCountPerElement>4</AttributeCountPerElement>
+        <NamespaceCountPerElement>3</NamespaceCountPerElement>
+        <ChildCount includeText="true"
+                    includeComment="true"
+                    includeProcessingInstruction="true"
+                    includeElement="true">500</ChildCount>
+    </StructureLimits>
+    <ValueLimits>
+         <Text>2048</Text>
+         <Attribute>2048</Attribute>
+         <NamespaceURI>256</NamespaceURI>
+         <Comment>300</Comment>
+         <ProcessingInstructionData>60</ProcessingInstructionData>
+    </ValueLimits>
+    <NameLimits>
+          <Element>60</Element>
+          <Attribute>60</Attribute>
+          <NamespacePrefix>60</NamespacePrefix>
+          <ProcessingInstructionTarget>60</ProcessingInstructionTarget>
+    </NameLimits>
+</XMLThreatProtection>

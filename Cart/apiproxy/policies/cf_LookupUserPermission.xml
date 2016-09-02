@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="cf_LookupUserPermission">
+    <DisplayName>cf_LookupUserPermission</DisplayName>
+     <CacheKey>
+      <Prefix>permission</Prefix>
+      <KeyFragment ref="masterDealerCode"/>
+      <KeyFragment ref="requestpath.definition"/>    
+      <KeyFragment ref="capi.request.verb"/>     
+    </CacheKey>
+    <CacheResource>usercache</CacheResource>
+    <Scope>Global</Scope>
+    <AssignTo>permissionCache</AssignTo>
+</LookupCache>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="cf_RetrieveWSSAuth" mapIdentifier="EnvConfig">
+    <DisplayName>cf_RetrieveWSSAuth</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Get assignTo="capi.target.request.wssAuth">
+        <Key>
+            <Parameter ref="wss.targetSystem"/>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

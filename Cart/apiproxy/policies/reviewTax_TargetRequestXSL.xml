@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="reviewTax_TargetRequestXSL">
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://reviewTax_TargetRequest.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="senderId" ref="senderid" />
+        <Parameter name="channelId" ref="channelid" />
+        <Parameter name="applicationId" ref="applicationid" />
+        <Parameter name="applicationUserId"  ref="request.header.applicationuserid"  />
+        <Parameter name="sessionId" ref="sessionid" />
+        <Parameter name="workflowId" ref="workflowid" />
+        <Parameter name="activityId" ref="activityid" />
+        <Parameter name="timestamp" ref="request.header.timestamp" />
+        <Parameter name="storeId" ref="storeid" />
+        <Parameter name="dealerCode" ref="dealercode" />
+        <Parameter name="interactionId" ref="interactionid" />
+        <Parameter name="userId" ref="userid" />
+        <Parameter name="scope" ref="request.header.scope" />
+        <Parameter name="masterDealerCode" ref="masterDealerCode" />
+        <Parameter name="serviceTransactionId" ref="messageid" />	
+        <Parameter name="systemId" ref="request.header.systemid" />
+        <Parameter name="userCompanyId" ref="request.header.usercompanyid" />
+        <Parameter name="customerCompanyId" ref="request.header.customercompanyid" />
+        <Parameter name="servicePartnerId" ref="request.header.servicepartnerId" />
+        <Parameter name="transactionType" ref="request.header.transactiontype" />
+        <Parameter name="providerId" ref="request.header.providerid" />
+        <Parameter name="contextId" ref="request.header.contextid" />
+        <Parameter name="customerId" ref="flow.event.request.customerId" />
+        <Parameter name="cartId" ref="flow.cart.request.cartId" />
+        <Parameter name="ABFEntitlements" ref="ABFEntitlements"/>
+        
+    </Parameters>
+</XSL>

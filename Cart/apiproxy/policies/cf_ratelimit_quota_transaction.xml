@@ -1,0 +1,9 @@
+<Quota async="false" continueOnError="false" enabled="true" name="cf_ratelimit_quota_transaction">
+	<DisplayName>cf_ratelimit_quota_transaction</DisplayName>
+	<Properties/>
+	<Allow countRef="apiproduct.apiproduct.quota.allowed"/>
+	<Interval ref="apiproduct.apiproduct.quota.interval">1</Interval>
+	<Distributed>true</Distributed>
+	<Synchronous>false</Synchronous>
+	<TimeUnit ref="apiproduct.apiproduct.quota.timeunit">minute</TimeUnit>
+</Quota>

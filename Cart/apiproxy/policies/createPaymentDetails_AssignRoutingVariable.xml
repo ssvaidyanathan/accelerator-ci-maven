@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="createPaymentDetails_AssignRoutingVariable">
+    <DisplayName>createPaymentDetails_AssignRoutingVariable</DisplayName>
+    <!-- Target Service name -->
+    <AssignVariable>
+        <Name>capi.target.route.service</Name>
+        <Value>OrderCheckoutEnterprise</Value>
+    </AssignVariable>
+    
+    <!-- Target  Action name -->    
+    <AssignVariable>
+        <Name>capi.target.route.operation</Name>
+        <Value>createOrderCheckout</Value>
+    </AssignVariable>
+    
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

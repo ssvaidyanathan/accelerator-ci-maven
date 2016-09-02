@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_GetDomainEntitlements">
+    <Source>entitlementscachemsg</Source>
+    <ResourceURL>xsl://cf_GetDomainEntitlements.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="apiABFList" ref="apiABFCacheVar"/>
+        <Parameter name="applicationuserid" ref="applicationuserid"/>
+    </Parameters>
+    <OutputVariable>ABFEntitlements</OutputVariable>
+</XSL>

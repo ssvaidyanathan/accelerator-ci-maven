@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_ParseFaultHandler">
+    <Source>message</Source>
+    <ResourceURL>xsl://cf_ParseFaultHandler.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+      <Parameter name="faultName" ref="fault.name" />
+      <Parameter name="jsonAttakFailed" ref="jsonattack.failed"/>
+      <Parameter name="xmlAttakFailed" ref="xmlattack.failed"/>
+    </Parameters>
+</XSL>

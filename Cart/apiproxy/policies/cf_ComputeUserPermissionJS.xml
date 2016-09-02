@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" async="false" enabled="true" name="cf_ComputeUserPermissionJS">
+    <ResourceURL>jsc://cf_ComputeUserPermissionJS.js</ResourceURL>
+</Javascript>

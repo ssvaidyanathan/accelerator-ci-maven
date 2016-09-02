@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="cf_ExtractTargetErrorDetails">
+	<XMLPayload stopPayloadProcessing="false">
+		<Variable name="statusCode" type="string">
+			<XPath>//apiError/statusCode</XPath>
+		</Variable>      
+		<Variable name="errorCount" type="integer">
+			<XPath>//apiError/count</XPath>
+		</Variable>
+		<Variable name="errorCode1" type="string">
+			<XPath>//apiError/errors/error[1]/code</XPath>
+		</Variable>
+		<Variable name="errorCode2" type="string">
+			<XPath>//apiError/errors/error[2]/code</XPath>
+		</Variable>
+		<Variable name="errorCode3" type="string">
+			<XPath>//apiError/errors/error[3]/code</XPath>
+		</Variable>
+		<Variable name="errorCode4" type="string">
+			<XPath>//apiError/errors/error[4]/code</XPath>
+		</Variable>
+		<Variable name="errorCode5" type="string">
+			<XPath>//apiError/errors/error[5]/code</XPath>
+		</Variable>
+		<Variable name="payLoad" type="nodeset">
+			<XPath>//apiError/errors</XPath>
+		</Variable>
+	</XMLPayload>
+</ExtractVariables>

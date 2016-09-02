@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="cf_ExtractFaultAndStatuscode">
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <XMLPayload>
+        <Namespaces>
+			<Namespace prefix="soapenv">http://schemas.xmlsoap.org/soap/envelope/</Namespace>
+			<Namespace prefix="sdo">http://retail.tmobile.com/sdo</Namespace>
+			<Namespace prefix="base">http://services.tmobile.com/base</Namespace>
+			<Namespace prefix="base1">http://service.tmobile.com/base</Namespace>
+			<Namespace prefix="base2">http://esp.t-mobile.com/base</Namespace>
+			<Namespace prefix="base3">http://esp.t-mobile.com/cso</Namespace>
+		</Namespaces>
+        <Variable name="statusCodeRSP" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/*/sdo:serviceStatus/sdo:serviceStatusCode</XPath>
+		</Variable>
+		<Variable name="statusCode" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/*/base:responseStatus/@code</XPath>
+		</Variable>
+		<Variable name="statusCode1" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/*/base1:responseStatus/@code</XPath>
+		</Variable>
+		<Variable name="statusCode2" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/*/base2:responseStatus/@code</XPath>
+		</Variable>
+		<Variable name="statusCode3" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/*/base3:responseStatus/@code</XPath>
+		</Variable>
+		<Variable name="faultCode" type="string">
+			<XPath>/soapenv:Envelope/soapenv:Body/soapenv:Fault/faultcode</XPath>
+		</Variable>
+      	<Variable name="errorResponse" type="nodeset">
+			<XPath>/*</XPath>
+		</Variable>	
+    </XMLPayload>
+    <Source clearPayload="false">response</Source>
+
+</ExtractVariables>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_AssignDummyErrorObjXSL">
+    <Source>message</Source>
+    <ResourceURL>xsl://cf_AssignDummyErrorObjXSL.xslt</ResourceURL>
+    
+    <Parameters ignoreUnresolvedVariables="true">
+    	<Parameter name="pARRAY" value="~ARRAY~" />
+    	<Parameter name="acceptType" ref="request.header.Accept" />
+    </Parameters>
+
+</XSL>

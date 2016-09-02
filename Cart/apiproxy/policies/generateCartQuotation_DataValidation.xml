@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="generateCartQuotation_DataValidation">
+    <Source>request</Source>
+    <FaultRules/>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://generateCartQuotation_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true" >
+        <!-- Pass query/path parameters -->
+        <Parameter name="cartId" ref="cartId" />
+        <Parameter name="tokenScope" ref="tokenScope"/>
+        <Parameter name="authfinancialaccountid" ref="authfinancialaccountid"/>
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

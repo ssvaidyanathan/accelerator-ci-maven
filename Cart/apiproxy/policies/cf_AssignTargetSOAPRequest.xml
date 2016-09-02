@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignTargetSOAPRequest">
+	<Set>
+		<Headers>
+			<Header name="Content-Type">text/xml; charset=utf-8</Header>
+			<Header name="Authorization">{capi.target.request.wssAuth}</Header>
+			<Header name="SOAPAction">"{capi.target.route.operation}"</Header>
+		</Headers>
+		<Payload contentType="text/xml">{request.content}</Payload>
+		<Verb>POST</Verb>
+	</Set>
+	<AssignVariable>
+		<Name>target.copy.pathsuffix</Name>
+		<Value>false</Value>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>target.copy.queryparams</Name>
+		<Value>false</Value>
+	</AssignVariable>	
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

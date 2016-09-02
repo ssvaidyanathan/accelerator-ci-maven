@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignStatic">
+	<AssignVariable>
+		<Name>capi.request.verb</Name>
+		<Ref>request.verb</Ref>
+	</AssignVariable>
+	<!-- Store data required for logging -->
+	<AssignVariable>
+		<Name>elfLog.interactionId</Name>
+		<Ref>request.header.interactionid</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>elfLog.requestVerb</Name>
+		<Ref>request.verb</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>elfLog.proxyRequest</Name>
+		<Ref>request.content</Ref>
+	</AssignVariable>
+	<AssignVariable>
+		<Name>facaderequestbasepath</Name>
+		<Ref>request.header.facaderequestbasepath</Ref>
+	</AssignVariable>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

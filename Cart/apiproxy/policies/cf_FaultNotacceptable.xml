@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="cf_FaultNotacceptable">
+	<FaultResponse>
+		<Set>
+			<StatusCode>406</StatusCode>
+			<ReasonPhrase>Not Acceptable</ReasonPhrase>
+		</Set>
+	</FaultResponse>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

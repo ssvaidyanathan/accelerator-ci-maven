@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignMessageContentToSOAPResp">
+      <AssignVariable>
+   	    <Name>message.content</Name>
+   	    <Ref>response.content</Ref>
+    </AssignVariable>  
+	<AssignVariable>
+		<Name>message.header.Content-Type</Name>
+		<Value>text/xml</Value>
+	</AssignVariable>
+	<AssignVariable>
+        <Name>statusCode</Name>
+		<Value/>
+    </AssignVariable>	
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

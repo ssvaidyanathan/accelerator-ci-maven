@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" async="false" enabled="true" name="parseSupervisorList">
+    <ResourceURL>jsc://parseSupervisorList.js</ResourceURL>
+</Javascript>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="createCart_GetFinancialAccountDetails_RequestXSL">
+	<DisplayName>createCart_GetFinancialAccountDetails_RequestXSL</DisplayName>
+	<Source>request</Source>
+	<ResourceURL>xsl://createCart_GetFinancialAccountDetails_Request.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >
+		<Parameter name="senderId" ref="headers.senderid" />
+		<Parameter name="channelId" ref="headers.channelid" />
+		<Parameter name="applicationId" ref="applicationid" />
+		<Parameter name="activityId" ref="activityid" />
+		<Parameter name="interactionId" ref="interactionid" />
+		<Parameter name="sessionId" ref="sessionid" />
+		<Parameter name="workflowId" ref="workflowid" />
+		<Parameter name="serviceTransactionId" ref="servicetransactionid" />
+		<Parameter name="storeId" ref="storeid" />
+		<Parameter name="masterDealerCode" ref="masterdealercode" />
+		<Parameter name="dealerCode" ref="dealercode" />
+		<Parameter name="applicationUserId" ref="applicationuserid" />
+		<Parameter name="ABFEntitlements" ref="ABFEntitlements"/>
+		<Parameter name="MSISDN" ref="msisdn"/>
+	</Parameters>
+	<OutputVariable>getFinancialAccountDetailsVar</OutputVariable>
+</XSL>

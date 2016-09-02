@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="getShippingOptions_DataValidation">
+    <DisplayName>getShippingOptions_DataValidation</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://getShippingOptions_DataValidation.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true" >
+      	<Parameter name="cartId" ref="flow.cart.request.cartId"/>
+    </Parameters>
+    <OutputVariable>apiError</OutputVariable>
+</XSL>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="createCart_GetFinancialAccountDetailsService_POLARIS">
+    <DisplayName>createCart_GetFinancialAccountDetailsService_POLARIS</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Authorization">{capi.target.request.EricssonAuth}</Header>
+                <Header name="SOAPAction">getFinancialAccountDetails</Header>
+            </Headers>
+            <Payload contentType="text/xml">{getFinancialAccountDetailsVar}</Payload>
+            <Verb>POST</Verb>
+        </Set>
+    </Request>
+    <Response>getFinancialAccountDetailsResponse</Response>
+    <HTTPTargetConnection>
+        <LoadBalancer>
+            <Server name="FinancialAccountDetailsWSIL_POLARIS_Target">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>/services/FinancialAccountDetailsWSIL</Path>
+        <Properties>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">360000</Property>
+        </Properties>
+    </HTTPTargetConnection>
+</ServiceCallout>

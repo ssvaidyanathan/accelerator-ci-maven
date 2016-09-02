@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="cf_LookupCacheForApiABFs">
+    <DisplayName>cf_LookupCacheForApiABFs</DisplayName>
+     <CacheKey>
+      <Prefix>API_ABF_REFERENCE_CACHE</Prefix>
+      <KeyFragment>map</KeyFragment>
+      <KeyFragment ref="requestpath.definition"/>    
+      <KeyFragment ref="capi.request.verb"/>     
+    </CacheKey>
+    <CacheResource>API_ABF_REFERENCE_CACHE</CacheResource>
+    <Scope>Global</Scope>
+    <AssignTo>apiABFCacheVar</AssignTo>
+</LookupCache>

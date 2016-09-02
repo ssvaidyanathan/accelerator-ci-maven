@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AssignVariablesRaiseFaultNotAuthorized">
+    <DisplayName>cf_AssignVariablesRaiseFaultNotAuthorized</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <AssignVariable>
+        <Name>subStatusDesc</Name>
+        <Value>"Unauthorized"</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>statusDetail</Name>
+        <Value>"Invalid permissions"</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>statusCode</Name>
+        <Value>401</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>subStatusCode</Name>
+        <Value>"ID1"</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

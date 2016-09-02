@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="cf_SoapToXmlResponse">
+    <DisplayName>cf_SoapToXmlResponse</DisplayName>
+    <Source>response</Source>
+    <ResourceURL>xsl://cf_SoapToXmlResponse.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true"/>
+</XSL>

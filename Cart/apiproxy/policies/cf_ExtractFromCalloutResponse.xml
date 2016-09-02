@@ -1,0 +1,9 @@
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="cf_ExtractFromCalloutResponse">
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">callout.response</Source>
+    <XMLPayload>
+        <Variable name="resultCode" type="string">
+            <XPath>/*[local-name()='Envelope']/*[local-name()='Body']/*[local-name()='userProfilesAndPermissionsResponse']/*[local-name()='serviceStatus']/*[local-name()='serviceStatusCode']</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

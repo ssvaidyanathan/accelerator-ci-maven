@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="getCartItemDetails_ProxyResponseXSL">
+    <Source>response</Source>
+	<ResourceURL>xsl://getCartItemDetails_ProxyResponse.xslt</ResourceURL>
+	<Parameters ignoreUnresolvedVariables="true" >
+		<Parameter name="cartItemId" ref="flow.cart.request.cartItemId"/>
+		<Parameter name="acceptType" ref="request.header.Accept"/>
+	</Parameters>
+</XSL>

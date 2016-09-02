@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true"
+    name="updatePPUdetails_TargetRequestXSL">
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://updatePPUdetails_TargetRequest.xslt</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true">
+        <Parameter name="senderId" ref="senderid"/>
+        <Parameter name="channelId" ref="channelid"/>
+        <Parameter name="applicationId" ref="applicationid"/>
+        <Parameter name="applicationUserId" ref="applicationuserid"/>
+        <Parameter name="sessionId" ref="sessionid"/>
+        <Parameter name="workflowId" ref="workflowid"/>
+        <Parameter name="activityId" ref="activityid"/>
+        <Parameter name="timestamp" ref="timestamp"/>
+        <Parameter name="storeId" ref="storeid"/>
+        <Parameter name="dealerCode" ref="dealercode"/>
+        <Parameter name="interactionId" ref="interactionid"/>
+        <Parameter name="userId" ref="userid"/>
+        <Parameter name="scope" ref="scope"/>
+        <Parameter name="masterDealerCode" ref="masterDealerCode"/>
+        <Parameter name="serviceTransactionId" ref="messageid"/>
+        <Parameter name="systemId" ref="systemid"/>
+        <Parameter name="userCompanyId" ref="usercompanyid"/>
+        <Parameter name="customerCompanyId" ref="customercompanyid"/>
+        <Parameter name="servicePartnerId" ref="servicepartnerid"/>
+        <Parameter name="transactionType" ref="transactiontype"/>
+        <Parameter name="providerId" ref="providerid"/>
+        <Parameter name="contextId" ref="contextid"/>
+        <Parameter name="customerId" ref="flow.event.request.customerId"/>
+        <Parameter name="cartId" ref="updateShippingDetails.cartid"/>
+        <Parameter name="ABFEntitlements" ref="ABFEntitlements"/>
+        
+    </Parameters>
+</XSL>
