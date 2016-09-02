@@ -205,7 +205,7 @@
 						</configuration>
 					</execution>
 					<!-- run unit tests -->
-					<execution>
+					<!--<execution>
 						<id>unit</id>
 						<phase>validate</phase>
 						<goals>
@@ -217,7 +217,7 @@
 								target/tests/unit
 							</commandlineArgs>
 						</configuration>
-					</execution>
+					</execution>-->
 					<!-- run integration tests -->
 					<execution>
 						<id>integration</id>
