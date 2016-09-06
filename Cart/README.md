@@ -1,2 +1,2 @@
 mvn clean install -Pdit01
-test123456
+test
