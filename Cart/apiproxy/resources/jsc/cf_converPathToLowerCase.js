@@ -1,6 +1,6 @@
-var uriPath = context.getVariable("requestpath.definition");
+var uriPath = context.getVariable('requestpath.definition');
 
-if ( typeof uriPath != 'undefined' && uriPath != null) {
-	uriPath=uriPath.toLowerCase();
-	context.setVariable("requestpath.definition",uriPath);
+if (uriPath !== null) {
+    uriPath = uriPath.toLowerCase();
+    context.setVariable('requestpath.definition', uriPath);
 }

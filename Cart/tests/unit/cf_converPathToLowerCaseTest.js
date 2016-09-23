@@ -15,7 +15,7 @@ describe('feature: convert path to lower case', function() {
 
 		moduleLoader.load(js, function(err) {
 			expect(err).to.be.undefined;	
-			expect(mock.contextSetVariableMethod.calledOnce).to.equal(true);
+			expect(mock.contextSetVariableMethod.called).to.equal(true);
 			expect(mock.contextSetVariableMethod.firstCall.args[1]).to.equal('/v1/cart');
 			done();
 		});

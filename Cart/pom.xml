@@ -205,19 +205,33 @@
 						</configuration>
 					</execution>
 					<!-- run unit tests -->
-					<!--<execution>
+					<execution>
 						<id>unit</id>
 						<phase>validate</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/mocha/bin/mocha</executable>
+							<executable>node</executable>
 							<commandlineArgs>
-								target/tests/unit
+								node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha tests/unit
 							</commandlineArgs>
 						</configuration>
-					</execution>-->
+					</execution>
+					<!-- Check Code Coverage-->
+					<execution>
+						<id>check-coverage</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>node</executable>
+							<commandlineArgs>
+								node_modules/istanbul/lib/cli.js check-coverage
+							</commandlineArgs>
+						</configuration>
+					</execution>
 					<!-- run integration tests -->
 					<execution>
 						<id>integration</id>
@@ -226,33 +240,11 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/cucumber/bin/cucumber.js</executable>
+							<executable>node</executable>
 							<commandlineArgs>
-								target/tests/integration/features --tags ${api.testtag} --format json:reports.json
+								node_modules/cucumber/bin/cucumber.js target/tests/integration/features --tags ${api.testtag} --format json:target/reports.json
 							</commandlineArgs>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<!-- cleaning dirs -->
-			<plugin>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>2.5</version>
-				<executions>
-					<execution>
-						<id>auto-clean-init</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>auto-clean-install</id>
-						<phase>install</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
