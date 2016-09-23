@@ -33,7 +33,7 @@ describe('feature: tests on the good parsers', function() {
 			expect(mock.contextSetVariableMethod.args[11][1]).to.equal(null); //"transactionId4"
 			expect(mock.contextSetVariableMethod.args[12][1]).to.equal(null); //"transactionId5"
 			expect(mock.contextSetVariableMethod.args[13][1]).to.equal("DEFAULT"); //"custInfo"
-			expect(mock.contextSetVariableMethod.args[14][1]).to.equal("def2"); //"supervisorEntitlementsVar1"
+			expect(mock.contextSetVariableMethod.args[14][1]).to.equal("abc2"); //"supervisorEntitlementsVar1"
 			expect(mock.contextSetVariableMethod.args[15][1]).to.equal(null); //"supervisorEntitlementsVar2"
 			expect(mock.contextSetVariableMethod.args[16][1]).to.equal(null); //"supervisorEntitlementsVar3"
 			expect(mock.contextSetVariableMethod.args[17][1]).to.equal(null); //"supervisorEntitlementsVar4"
