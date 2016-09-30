@@ -1,6 +1,6 @@
 var uriPath = context.getVariable('requestpath.definition');
+context.setVariable('requestpath.definition', getLowerCase(uriPath));
 
-if (uriPath !== null) {
-    uriPath = uriPath.toLowerCase();
-    context.setVariable('requestpath.definition', uriPath);
+function getLowerCase(uriPath){
+	return uriPath.toLowerCase();
 }
