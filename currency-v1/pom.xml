@@ -7,7 +7,7 @@
 	<version>-</version>
 	<name>currency-${deployment.suffix}v1</name>
 	<packaging>pom</packaging>
-
+	<!-- Test -->
 	<pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
