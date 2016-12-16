@@ -102,7 +102,7 @@
 					<directories>
 						<directory>apiproxy/resources/jsc</directory>
 					</directories>
-					<reporter>jslint</reporter>
+					<reporter>html</reporter>
 				</configuration>
 			</plugin>
 
