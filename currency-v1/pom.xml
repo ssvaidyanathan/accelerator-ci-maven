@@ -103,6 +103,7 @@
 						<directory>apiproxy/resources/jsc</directory>
 					</directories>
 					<reporter>html</reporter>
+					<reportFile>target/jshint</reportFile>
 				</configuration>
 			</plugin>
 
