@@ -27,16 +27,16 @@ var assertSuccessfulApiResponse = function(apickli) {
 
 module.exports = function() {
 
-	this.When(/^I request all exchange rates with default values$/, function(callback) {
+	this.When(/^I request all exchange rates with default values$/, {timeout: 60 * 1000}, function(callback) {
 		this.apickli.get('/rates', callback);
 	});
 
-	this.When(/^I request all exchange rates with (.{3}) as the base currency$/, function(base, callback) {
+	this.When(/^I request all exchange rates with (.{3}) as the base currency$/, {timeout: 60 * 1000}, function(base, callback) {
 		this.apickli.queryParameters.base = base;
 		this.apickli.get('/rates', callback);
 	});
 
-	this.When(/^I request all exchange rates for (.*)$/, function(date, callback) {
+	this.When(/^I request all exchange rates for (.*)$/, {timeout: 60 * 1000}, function(date, callback) {
 		this.apickli.queryParameters.date = date;
 		this.apickli.get('/rates', callback);
 	});
