@@ -204,7 +204,7 @@
 					<!-- npm install -->
 					<execution>
 						<id>npm-install</id>
-						<phase>validate</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
@@ -218,7 +218,7 @@
 					<!-- run unit tests -->
 					<execution>
 						<id>unit</id>
-						<phase>validate</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
@@ -232,7 +232,7 @@
 					<!-- Check Code Coverage-->
 					<execution>
 						<id>check-coverage</id>
-						<phase>validate</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
