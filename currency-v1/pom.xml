@@ -64,7 +64,7 @@
 				<apigee.password>${password}</apigee.password>
 				<apigee.options>override</apigee.options>
 				<apigee.override.delay>5</apigee.override.delay>
-				<api.northbound.domain>${org}-test.apigee.net</api.northbound.domain>
+				<api.northbound.domain>${org}-prod.apigee.net</api.northbound.domain>
 				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
