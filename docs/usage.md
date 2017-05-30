@@ -17,7 +17,7 @@ have a running Jenkins instance using Docker.
 
     ```bash
     cd currency-v1
-    mvn install -Ptest -Denv.APIGEE_ORG={ORG} -Denv.APIGEE_USERNAME={username} -Denv.APIGEE_PASSWORD={password} -Denv.API_DOMAIN_TEST={apigee_proxy_domain}
+    mvn install -Ptest -Dorg={ORG} -Dusername={username} -Dpassword={password}
     ```
 
     If you don't want to pass that many arguments to maven, you can add those
@@ -28,10 +28,9 @@ have a running Jenkins instance using Docker.
         <id>test</id>
         <properties>
             <!-- these settings are for accelerator-ci-maven -->
-            <env.APIGEE_ORG>...</env.APIGEE_ORG>
-            <env.APIGEE_USERNAME>...</env.APIGEE_USERNAME>
-            <env.APIGEE_PASSWORD>...</env.APIGEE_PASSWORD>
-            <env.API_DOMAIN_TEST>...</env.API_DOMAIN_TEST>
+            <org>...</org>
+            <username>...</username>
+            <password>...</password>
         </properties>
     </profile>
     ```
