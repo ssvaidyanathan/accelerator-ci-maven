@@ -50,6 +50,9 @@
 
 	<HTTPTargetConnection>
 		<URL>http://api.fixer.io/{flow.target.resource}</URL>
+		<Properties>
+	      <Property name="io.timeout.millis">60000</Property>
+	    </Properties>
 	</HTTPTargetConnection>
 
 </TargetEndpoint>
