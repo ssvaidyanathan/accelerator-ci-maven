@@ -206,7 +206,7 @@
 					<!-- npm install -->
 					<execution>
 						<id>npm-install</id>
-						<phase>test</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
