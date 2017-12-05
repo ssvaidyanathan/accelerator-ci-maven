@@ -105,7 +105,7 @@ variables. These variables are set directly to the docker container with the
 docker run command.
 
 There is a script provided to make this process easier which can be found
-[here](setup/run-image.sh). Modify this script to provide values specific to
+[here](../setup/run-image.sh). Modify this script to provide values specific to
 your setup and execute the script to run the image.
 
 Please note that `setup/run-image.sh` script is in source control. Copy this
