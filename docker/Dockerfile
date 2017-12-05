@@ -1,4 +1,4 @@
-FROM jenkins:2.7.1
+FROM jenkins:2.7.2
 
 # install jenkins plugins
 COPY jenkins/plugins /usr/share/jenkins/plugins
