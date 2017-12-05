@@ -218,7 +218,7 @@
 						</configuration>
 					</execution>
 					<!-- run apigeelint -->
-					<execution>
+					<!--<execution>
 						<id>apigeelint</id>
 						<phase>validate</phase>
 						<goals>
@@ -230,7 +230,7 @@
 								node_modules/apigeelint/cli.js -s . -f table.js
 							</commandlineArgs>
 						</configuration>
-					</execution>
+					</execution> -->
 					<!-- run unit tests -->
 					<execution>
 						<id>unit</id>
