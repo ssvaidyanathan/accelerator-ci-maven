@@ -6,7 +6,8 @@ have a running Jenkins instance using Docker.
 ## Fixer API Key
 
 - Generate the API Key for calling the [Fixer API](https://fixer.io/signup/free)
-- Once you get the API Key, pass this to the maven command used below and Jenkins jobs once they are configured
+- Once you get the API Key, pass this to the maven command used below
+- Also update the Jenkins jobs once they are configured. You will need to login to the Jenkins and update the jobs individually and paste the API Key under the `Build -> Invoke top-level Maven targets` section
 
 ## Feature development
 
