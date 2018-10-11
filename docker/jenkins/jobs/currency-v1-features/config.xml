@@ -36,7 +36,7 @@
         <artifactId>currency-v1</artifactId>
     </rootModule>
     <rootPOM>currency-v1/pom.xml</rootPOM>
-    <goals>install -Ptest -Dcommit=${GIT_COMMIT} -Dbranch=${GIT_BRANCH} -Dapigee.config.options=update -Dfixer-api-key=<fixer-api-key> -Dapigee.config.file=./target/edge.json</goals>
+    <goals>install -Ptest -Dcommit=${GIT_COMMIT} -Dbranch=${GIT_BRANCH} -Dapigee.config.options=update -Dfixer-api-key=<fixer-api-key> -Dapigee.config.file=./-Dapigee.config.file=./currency-v1/target/edge.json</goals>
     <aggregatorStyleBuild>true</aggregatorStyleBuild>
     <incrementalBuild>false</incrementalBuild>
     <ignoreUpstremChanges>true</ignoreUpstremChanges>
