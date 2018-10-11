@@ -3,6 +3,11 @@
 This document assumes you have followed the [setup](setup.md) procedures and
 have a running Jenkins instance using Docker.
 
+## Fixer API Key
+
+- Generate the API Key for calling the [Fixer API](https://fixer.io/signup/free)
+- Once you get the API Key, pass this to the maven command used below and Jenkins jobs once they are configured
+
 ## Feature development
 
 1.  Create a feature branch called `feature/1` from `master` branch
@@ -17,7 +22,7 @@ have a running Jenkins instance using Docker.
 
     ```bash
     cd currency-v1
-    mvn install -Ptest -Dorg={ORG} -Dusername={username} -Dpassword={password}
+    mvn install -Ptest -Dorg={ORG} -Dusername={username} -Dpassword={password} -Dapigee.config.options=update -Dfixer-api-key=<fixer-api-key> -Dapigee.config.file=./target/edge.json
     ```
 
     If you don't want to pass that many arguments to maven, you can add those
@@ -39,7 +44,7 @@ have a running Jenkins instance using Docker.
     this command instead of the above long maven command:
 
     ```bash
-    mvn install -Ptest
+    mvn install -Ptest -Dapigee.config.options=update -Dfixer-api-key=<fixer-api-key> -Dapigee.config.file=./target/edge.json
     ```
 
     This command will deploy the bundle to `test` environment as

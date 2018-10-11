@@ -47,7 +47,10 @@
 				<Name>JavaScript.ConfigureTargetRequest</Name>
 			</Step>
 			<Step>
-                <Name>Assign-Message-1</Name>
+				<Name>KVM-Get-Fixer-APIKey</Name>
+			</Step>
+			<Step>
+                <Name>Asssign-Message-Fixer-APIKey</Name>
             </Step>
 		</Request>
 	</PostFlow>

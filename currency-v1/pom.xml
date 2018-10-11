@@ -137,6 +137,7 @@
 									<includes>
 										<include>apiproxy/**</include>
 										<include>test/integration/**</include>
+										<include>edge.json</include>
 									</includes>
 								</resource>
 							</resources>
@@ -162,6 +163,7 @@
 				<configuration>
 					<basedir>${target.root.dir}</basedir>
 					<includes>
+						<include>edge.json</include>
 						<include>apiproxy/proxies/default.xml</include>
 						<include>apiproxy/proxies/loggly.xml</include>
 						<include>test/integration/test-config.json</include>
@@ -180,13 +182,33 @@
 							<token>@description</token>
 							<value>commit ${commit} from ${branch} branch by ${user.name}</value>
 						</replacement>
+						<replacement>
+							<token>fixer-api-key-here</token>
+							<value>${fixer-api-key}</value>
+						</replacement>
 					</replacements>
 				</configuration>
 			</plugin>
 
 			<plugin>
+			    <groupId>com.apigee.edge.config</groupId>
+			    <artifactId>apigee-config-maven-plugin</artifactId>
+			    <version>1.2.2</version>
+			    <executions>
+			        <execution>
+			            <id>create-config-kvm</id>
+			            <phase>package</phase>                        
+			            <goals>
+			                <goal>keyvaluemaps</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin> 
+
+			<plugin>
 				<groupId>io.apigee.build-tools.enterprise4g</groupId>
 				<artifactId>apigee-edge-maven-plugin</artifactId>
+				<version>1.1.7</version>
 				<executions>
 					<execution>
 						<id>configure-bundle-step</id>
