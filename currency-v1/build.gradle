@@ -1,0 +1,37 @@
+/*To run 
+    gradle deploy -Pprofile=test\
+                  -Pusername=<username>\
+                  -Ppassword=<password>\
+                  -Porg=<org>\
+                  -Pfixer_api_key=<fixer_api_key>
+*/
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.dkorotych.gradle.maven.exec:gradle-maven-exec-plugin:2.0"
+    }
+}
+
+apply plugin: "com.github.dkorotych.gradle-maven-exec"
+
+task deploy(type: MavenExec){
+    goals 'clean', 'install'
+    debug false
+    options {
+        activateProfiles = ["${profile}"]
+        define = [
+                'org': "${org}",
+                'username': "${username}",
+                'password': "${password}",
+                'apigee.config.options': "update",
+                'fixer-api-key': "${fixer_api_key}",
+                'apigee.config.file': "./target/edge.json"
+        ]
+    }
+}
