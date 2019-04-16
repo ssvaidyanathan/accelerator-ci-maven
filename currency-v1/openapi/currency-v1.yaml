@@ -4,6 +4,7 @@ info:
   version: 1.0.0
   title: Currency API Version 1
 host: saisarantest-eval-test.apigee.net
+basePath: /currency/v1
 schemes:
   - https
 paths:
