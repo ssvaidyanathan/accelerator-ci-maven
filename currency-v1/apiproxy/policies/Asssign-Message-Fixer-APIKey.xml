@@ -7,6 +7,13 @@
             <QueryParam name="access_key">{private.fixer.apiKey}</QueryParam>
         </QueryParams>
     </Add>
+    <!-- Adding this as Fixer API does not support https encryption with trial license -->
+    <Set>
+        <Headers>
+            <Header name="X-Forwarded-Proto">http</Header>
+            <Header name="X-Forwarded-Port">80</Header>
+        </Headers>
+    </Set>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
     <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>

@@ -6,7 +6,7 @@ info:
 host: saisarantest-eval-test.apigee.net
 basePath: /currency/v1
 schemes:
-  - http
+  - https
 paths:
   /rates:
     get:
