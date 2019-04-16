@@ -33,9 +33,9 @@ paths:
             $ref: '#/definitions/rates'
   /rates-new:
     get:
-      summary: Get Rates
-      operationId: Get Rates
-      description: Get Rates
+      summary: Get Rates New
+      operationId: Get Rates New
+      description: Get Rates New
       produces:
         - application/json
       parameters:
