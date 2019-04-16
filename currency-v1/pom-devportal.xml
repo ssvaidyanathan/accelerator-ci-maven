@@ -37,7 +37,7 @@
             <properties>
                 <portal.username>${pusername}</portal.username>
                 <portal.password>${ppassword}</portal.password>
-                <portal.directory>./openapi</portal.directory>
+                <portal.directory>${pdir}</portal.directory>
                 <portal.url>${purl}</portal.url>
                 <portal.path>${ppath}</portal.path>
                 <portal.cronkey>${pcronkey}</portal.cronkey>
