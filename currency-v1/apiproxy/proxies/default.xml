@@ -46,11 +46,11 @@
 
 	<RouteRule name="default">
 		<TargetEndpoint>default</TargetEndpoint>
-		<TargetEndpoint>secure</TargetEndpoint>
 	</RouteRule>
 
 	<HTTPProxyConnection>
 		<BasePath>/currency/v1</BasePath>
 		<VirtualHost>default</VirtualHost>
+		<VirtualHost>secure</VirtualHost>
 	</HTTPProxyConnection>
 </ProxyEndpoint>
