@@ -31,6 +31,29 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/rates'
+  /rates-new:
+    get:
+      summary: Get Rates
+      operationId: Get Rates
+      description: Get Rates
+      produces:
+        - application/json
+      parameters:
+        - name: base
+          in: query
+          description: Base currency
+          required: false
+          type: string
+        - name: date
+          in: query
+          description: Date in YYYY-MM-DD format
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/rates'
 definitions:
   rates:
     type: object
