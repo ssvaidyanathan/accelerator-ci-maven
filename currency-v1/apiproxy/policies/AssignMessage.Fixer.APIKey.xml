@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage async="false" continueOnError="false" enabled="true" name="Asssign-Message-Fixer-APIKey">
-    <DisplayName>Asssign-Message-Fixer-APIKey</DisplayName>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessage.Fixer.APIKey">
+    <DisplayName>AssignMessage.Fixer.APIKey</DisplayName>
     <Properties/>
     <Add>
         <QueryParams>
