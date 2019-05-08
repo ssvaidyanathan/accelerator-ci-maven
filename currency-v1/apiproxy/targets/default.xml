@@ -11,7 +11,7 @@
 			</Step>
 			<Step>
 				<Name>ExtractVariables.GetTargetErrorMessage</Name>
-				<Condition>request.content != null</Condition>
+				<Condition>response.content != null</Condition>
 			</Step>
 			<Step>
 				<Name>AssignMessage.SetTarget422ErrorVariables</Name>
@@ -50,7 +50,7 @@
 				<Name>KVM-Get-Fixer-APIKey</Name>
 			</Step>
 			<Step>
-                <Name>Asssign-Message-Fixer-APIKey</Name>
+                <Name>AssignMessage.Fixer.APIKey</Name>
             </Step>
 		</Request>
 	</PostFlow>
