@@ -2,33 +2,16 @@
     "version": "1.0",
     "envConfig": {
         "test": {
-            "kvms": [
+            "targetservers": [
                 {
-                    "name": "fixer-api-key",
-                    "encrypted": true,
-                    "entry": [
-                        {
-                            "name": "apikey",
-                            "value": "fixer-api-key-here"
-                        }
-                    ]
+                    "name": "Enterprisetarget",
+                    "host": "example.com",
+                    "isEnabled": true,
+                    "port": 8080
                 }
             ]
         },
-        "prod": {
-            "kvms": [
-                {
-                    "name": "fixer-api-key",
-                    "encrypted": true,
-                    "entry": [
-                        {
-                            "name": "apikey",
-                            "value": "fixer-api-key-here"
-                        }
-                    ]
-                }
-            ]
-        }
+        "prod": {}
     },
     "orgConfig": {},
     "apiConfig": {}
