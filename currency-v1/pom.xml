@@ -49,7 +49,7 @@
 				<apigee.password>${settings.servers.apigeecred.password}</apigee.password>-->
 				<apigee.username>${username}</apigee.username>
 				<apigee.password>${password}</apigee.password>
-				<apigee.options>update</apigee.options>
+				<apigee.options>override</apigee.options>
 				<api.northbound.domain>${org}-test.apigee.net</api.northbound.domain>
 				<apigee.serviceaccount.file>${sa_file}</apigee.serviceaccount.file>
 				<api.testtag>~@wip</api.testtag>
