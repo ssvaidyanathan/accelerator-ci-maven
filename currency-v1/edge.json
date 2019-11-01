@@ -2,7 +2,7 @@
     "version": "1.0",
     "envConfig": {
         "test": {
-            "targetservers": [
+            "targetServers": [
                 {
                     "name": "Enterprisetarget",
                     "host": "example.com",
